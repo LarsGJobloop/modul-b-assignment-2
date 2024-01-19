@@ -15,8 +15,8 @@ Read the terminal output before and after to see the difference
 ******************************************************************************/
 
 export function start() {
-  //your code here
-  return true
+    //your code here
+ return true
 };
 
 /******************************************************************************
@@ -52,10 +52,10 @@ Example: "This is cool" should return "THIS IS COOL!"
 
 ******************************************************************************/
 
-export function makeMeLoud() {
+export funct""ion makeMeLoud() {
   //your code here
-let myString = "i'm feeling good!"
-print.(myString.upper());
+const loudString = "This is cool".toUpperCase() + "!";
+return loudString 
 }
 
 /******************************************************************************
