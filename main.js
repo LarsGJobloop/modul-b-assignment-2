@@ -31,7 +31,7 @@ received is an even number.
 HINT: Use the modulo operator (%) Google it! 😊
 ******************************************************************************/
 
-export const oddOrEven = () => {
+export const oddOrEven = (number) => {
   if(number % 2  === 0){
     return "Even";
   } else {
@@ -54,6 +54,8 @@ Example: "This is cool" should return "THIS IS COOL!"
 
 export function makeMeLoud() {
   //your code here
+let myString = "i'm feeling good!"
+print.(myString.upper());
 }
 
 /******************************************************************************
