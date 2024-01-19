@@ -57,7 +57,8 @@ export function makeMeLoud() {
 const loudString = "This is cool".toUpperCase() + "!";
 return loudString 
 }
-
+//kansje makeMeLoud(string)
+// const loudString = string.tpUpperCase() + "!"
 /******************************************************************************
 3.
 
