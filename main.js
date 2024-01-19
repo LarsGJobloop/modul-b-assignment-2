@@ -52,7 +52,7 @@ Example: "This is cool" should return "THIS IS COOL!"
 
 ******************************************************************************/
 
-export funct""ion makeMeLoud() {
+export function makeMeLoud() {
   //your code here
 const loudString = "This is cool".toUpperCase() + "!";
 return loudString 
