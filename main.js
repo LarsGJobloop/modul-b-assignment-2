@@ -174,7 +174,7 @@ export function marvelEditor() {
     superheroArray[ReplaceDocStrange] = "Skrull";
   }
 
-  superheroArray.splice(1,2,"Captain America");
+  superheroArray.splice(0,2,"Captain America");
 
   const returnResult = superheroArray.join("💪");
 
