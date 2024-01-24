@@ -82,9 +82,27 @@ The function should return:
 
 ******************************************************************************/
 
-export const greeter = () => {
-  //your code here
+export const greeter = (name, hour) => {
+  if (hour < 0 || hour > 23) {
+    return "invalid time";
+  } else if (hour >= 0 && hour <= 5){
+    return `Good night ${name}`;
+  } else if (hour >= 6 && hour <= 11) {
+    return `Good morning ${name}`;
+} else if (hour >= 12 && hour <=17) {
+  return `Good day ${name}`;
+} else if (hour >= 18 && hour <= 23); {
+  return `Good evening ${name}`;
+} else {
+  return "Invalid time";
+}
 };
+
+const personName = "Marius";
+const currentHour = 5;
+const greeting = greeter(personName, currentHour);
+console.log(greeting);
+//should work
 
 /******************************************************************************
 4.
@@ -100,11 +118,17 @@ Example 2: ["One", "Two", "Three", "Four", "Five", "Six"] should return
 ["Two", "Three", "Four", "Five"]
 ******************************************************************************/
 
-export function arrayTrimmer() {
-  //your code here
+export function arrayTrimmer(arr) {
+  if (arr.length >= 2) {
+    return arr.slice(1, -1);
+  } else {
+    return [];
+  }
 }
-
-/******************************************************************************
+const array = [1,2,3,4,5];
+const arrayAfterFuction = arrayTrimmer(array);
+console.log(arrayAfterFuction);
+ /******************************************************************************
 5.
 
 Complete the function below:
@@ -124,6 +148,8 @@ Example3: "   hard        " should return "fun"
 ******************************************************************************/
 
 export const cleanAndFun = () => {
+  const cleanAndFun = ("Javascript is hard").replace(`hard`,`fun`).trim();
+  return cleanAndFun
   //your code here
 };
 
@@ -148,7 +174,19 @@ Use array methods to do the following:
 ******************************************************************************/
 
 export function marvelEditor() {
-  //your code here
+  const superheroArray = ["Spider-Man", "Thor", "Hulk", "Doctor Strange", "Iron Man", "Black Widow"]
+  superheroArray.shift();
+
+  const ReplaceDocStrange = superheroArray.indexOf("Doctor Strange");
+  if (ReplaceDocStrange !== -1){
+    superheroArray[ReplaceDocStrange] = "Skrull";
+  }
+
+  superheroArray.splice(1,2,"Captain America");
+
+  const returnResult = superheroArray.join("💪");
+
+  return returnResult;
 }
 
 /******************************************************************************
