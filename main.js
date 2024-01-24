@@ -52,9 +52,9 @@ Example: "This is cool" should return "THIS IS COOL!"
 
 ******************************************************************************/
 
-export function makeMeLoud() {
+export function makeMeLoud(inputString) {
   //your code here
-const loudString = "This is cool".toUpperCase() + "!";
+const loudString = inputString.toUpperCase() + "!";
 return loudString 
 };
 
@@ -82,27 +82,19 @@ The function should return:
 
 ******************************************************************************/
 
-export const greeter = (name, hour) => {
+export const greeter = (name, hour) =>{
   if (hour < 0 || hour > 23) {
-    return "invalid time";
-  } else if (hour >= 0 && hour <= 5){
-    return `Good night ${name}`;
+      return "Invalid time";
+  } else if (hour >= 0 && hour <= 5) {
+      return `Good night, ${name}`;
   } else if (hour >= 6 && hour <= 11) {
-    return `Good morning ${name}`;
-} else if (hour >= 12 && hour <=17) {
-  return `Good day ${name}`;
-} else if (hour >= 18 && hour <= 23); {
-  return `Good evening ${name}`;
-} else {
-  return "Invalid time";
+      return `Good morning, ${name}`;
+  } else if (hour >= 12 && hour <= 17) {
+      return `Good day, ${name}`;
+  } else if (hour >= 18 && hour <= 23) {
+      return `Good evening, ${name}`;
+  }
 }
-};
-
-const personName = "Marius";
-const currentHour = 5;
-const greeting = greeter(personName, currentHour);
-console.log(greeting);
-//should work
 
 /******************************************************************************
 4.
