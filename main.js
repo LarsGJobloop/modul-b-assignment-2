@@ -82,20 +82,19 @@ The function should return:
 
 ******************************************************************************/
 
-export const greeter = (name, hour) =>{
+export const greeter = (name, hour) => {
   if (hour < 0 || hour > 23) {
       return "Invalid time";
   } else if (hour >= 0 && hour <= 5) {
-      return `Good night, ${name}`;
+      return `Good night ${name}`;
   } else if (hour >= 6 && hour <= 11) {
-      return `Good morning, ${name}`;
+      return `Good morning ${name}`;
   } else if (hour >= 12 && hour <= 17) {
-      return `Good day, ${name}`;
+      return `Good day ${name}`;
   } else if (hour >= 18 && hour <= 23) {
-      return `Good evening, ${name}`;
+      return `Good evening ${name}`;
   }
 }
-
 /******************************************************************************
 4.
 
@@ -139,9 +138,10 @@ Example3: "   hard        " should return "fun"
 
 ******************************************************************************/
 
-export const cleanAndFun = () => {
-  const cleanAndFun = ("Javascript is hard").replace(`hard`,`fun`).trim();
-  return cleanAndFun
+export const cleanAndFun = (text) => {
+  const changedText = text.replace(/hard/g,`fun`).trim();
+  
+  return changedText
   //your code here
 };
 
